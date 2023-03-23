@@ -3,8 +3,11 @@ import time
 #this is the answers to the questions.
 Questions = ("1: ", "2: ", "3: ")
 Answers = ("1", "2", "3")
-trys = (3)
-points = (0)
+trys = 3
+points = 0
+correct1 = 10000
+correct2 = 10000
+correct3 = 10000
 
 def wronganswer():
   global trys
@@ -36,43 +39,43 @@ time.sleep(0.3)
 #this asks the first question
 print("now lets begin our quiz!")
 time.sleep(0.3)
-for x in range (trys):
+while trys in range (1,4):
   print("you have", trys, "tries left!")
   question1 = input(Questions[0])
   if question1 != Answers[0]:
     wronganswer()
   else:
+    correct1 = 0
     #this awards the player a point
     points += 1
     #this resets the try counter
     trys = 3
     print("goodjob!")
     time.sleep(0.3)
-    for x in range (trys):
-      #this asks the second question
-      print("you have", trys, "tries left!")
-      question2 = input(Questions[1])
-      if question2 != Answers[1]:
-        wronganswer()
-      else:
-        #this awards the player a point
-        points += 1
-        #this resets the try counter again
-        trys = 3
-        print("goodjob!")
-        time.sleep(0.3)
-        for x in range (trys):
-          #this asks the third question
-          print("you have", trys, "tries left!")
-          question3 = input(Questions[2])
-          if question3 != Answers[2]:
-            wronganswer()
-            time.sleep(0.3)
-          else:
-            #this awards the player a point
-            points += 1
-            time.sleep(0.3)
-            wincondition()
-            break
-      break
-  break
+while trys in range (1,4):
+  #this asks the second question
+  print("you have", trys, "tries left!")
+  question2 = input(Questions[1])
+  if question2 != Answers[1]:
+    wronganswer()
+  else:
+    correct2
+    #this awards the player a point
+    points += 1
+    #this resets the try counter again
+    trys = 3
+    print("goodjob!")
+    time.sleep(0.3)
+while trys in range (1,4):
+#this asks the third question
+  print("you have", trys, "tries left!") 
+  question3 = input(Questions[2])
+if question3 != Answers[2]:
+  wronganswer()
+  time.sleep(0.3)
+else:
+  correct3 = 0
+  #this awards the player a point
+  points += 1
+  time.sleep(0.3)
+  wincondition()
