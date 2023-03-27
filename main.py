@@ -1,27 +1,18 @@
 #importing time to space out messages
 import time
 #this is the answers to the questions.
-Questions = ("1: ", "2: ", "3: ")
-Answers = ("1", "2", "3")
-trys = 3
+Questions = ("How many houses are there?: ", "who is the head of rutherford?: ", "how many gyms are there?: ","what colour is hillary?: ","what colour is ngata?: ","what colour is lydiard?: ","what colour is mansfield?: ")
+Answers = ("6", "mrs koster", "3","red","green","orange","yellow")
 points = 0
-correct1 = 10000
-correct2 = 10000
-correct3 = 10000
 
 def wronganswer():
   global trys
   print("fail!")
   #every fail the player does, it takes 1 from the trys counter
-  trys -= 1
   time.sleep(0.3)
-  if trys in range(1, 4):
-    print("try again!")
-  else:
-    print("you lose! try again!")
 
 def wincondition():
-  if points == 3:
+  if points >= 6:
     print("you win!")
   else:
     print("you lose...")
@@ -35,47 +26,79 @@ name = input("what is your name? ")
 time.sleep(0.3)
 print("hello there", name)
 time.sleep(0.3)
+print("please use numberical numbers only and do all words in full lower case, also make sure everything is spelt correctly")
 
 #this asks the first question
 print("now lets begin our quiz!")
 time.sleep(0.3)
-while trys in range (1,4):
-  print("you have", trys, "tries left!")
-  question1 = input(Questions[0])
-  if question1 != Answers[0]:
-    wronganswer()
-  else:
-    correct1 = 0
-    #this awards the player a point
-    points += 1
-    #this resets the try counter
-    trys = 3
-    print("goodjob!")
-    time.sleep(0.3)
-while trys in range (1,4):
-  #this asks the second question
-  print("you have", trys, "tries left!")
-  question2 = input(Questions[1])
-  if question2 != Answers[1]:
-    wronganswer()
-  else:
-    correct2
-    #this awards the player a point
-    points += 1
-    #this resets the try counter again
-    trys = 3
-    print("goodjob!")
-    time.sleep(0.3)
-while trys in range (1,4):
+question1 = input(Questions[0])
+if question1 != Answers[0]:
+  wronganswer()
+else:
+  #this awards the player a point
+  points += 1
+  #this resets the try counter
+  print("goodjob!")
+  time.sleep(0.3)
+#this asks the second question
+question2 = input(Questions[1])
+if question2 != Answers[1]:
+  wronganswer()
+else:
+  #this awards the player a point
+  points += 1
+  #this resets the try counter again
+  print("goodjob!")
+  time.sleep(0.3)
 #this asks the third question
-  print("you have", trys, "tries left!") 
-  question3 = input(Questions[2])
+time.sleep(0.3)
+question3 = input(Questions[2])
 if question3 != Answers[2]:
+  wronganswer()
+else:
+  #this awards the player a point
+  points += 1
+  #this resets the try counter
+  print("goodjob!")
+  time.sleep(0.3)
+#this asks the fourth question
+question4 = input(Questions[3])
+if question4 != Answers[3]:
+  wronganswer()
+else:
+  #this awards the player a point
+  points += 1
+  #this resets the try counter again
+  print("goodjob!")
+  time.sleep(0.3)
+#this asks the fifth question
+time.sleep(0.3)
+question5 = input(Questions[4])
+if question5 != Answers[4]:
+  wronganswer()
+else:
+  #this awards the player a point
+  points += 1
+  #this resets the try counter
+  print("goodjob!")
+  time.sleep(0.3)
+#this asks the sixth question
+question6 = input(Questions[5])
+if question6 != Answers[5]:
+  wronganswer()
+else:
+  #this awards the player a point
+  points += 1
+  #this resets the try counter again
+  print("goodjob!")
+  time.sleep(0.3)
+#this asks the final question
+question7 = input(Questions[6])
+if question7 != Answers[6]:
   wronganswer()
   time.sleep(0.3)
 else:
-  correct3 = 0
   #this awards the player a point
   points += 1
   time.sleep(0.3)
-  wincondition()
+wincondition()
